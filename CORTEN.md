@@ -30,3 +30,17 @@ Functional identifiers are deliberately unchanged: module names, webhook headers
 3. Open a pull request into `corten`, check the screenshots, then merge. The image builds, and Railway is redeployed onto the new tag.
 
 Database migrations run on start-up, so check the upstream changelog before moving more than one release at a time.
+
+## Tests
+
+The upstream suite still asserts upstream branding, so these fail on this
+branch by design (44 in `test/tymeslot/emails` and
+`test/tymeslot/theme_customizations` at v1.46.0):
+
+- copy that names "Tymeslot" (now "Corten Meet") and the email footer
+- the turquoise stock accent and email neutrals (now Corten pink and CRM greys)
+- palette and font counts (the Corten palette and font are added)
+- the AA check on filled controls: Corten pins white on #ff3366 (3.55:1),
+  matching the CRM, rather than letting the palette darken the pink
+
+Anything failing outside those categories is a real regression.
