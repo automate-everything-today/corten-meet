@@ -19,37 +19,37 @@ defmodule Tymeslot.Emails.Shared.Styles.Tokens do
   # PALETTE — canvas, surfaces, ink, hairlines
   # ============================================================================
 
-  # Corten: neutrals remapped to the Corten CRM warm-grey scale.
+  # Corten: neutrals remapped to the Corten CRM "mist" greys (PR #773).
   # Light palette. Every value stays a few steps away from pure white and
   # pure black so a client-forced inversion still lands on readable colours:
   #   surface #fafaf6 → inverts to near-black with a warm tint
   #   ink     #111418 → inverts to warm cream, never glaring white
   # Contrast on the light side clears WCAG AA (≥4.5:1) for every text tier.
-  @canvas "#f3f1f1"
-  @canvas_soft "#ebe8e7"
-  @surface "#fdfcfc"
-  @hairline "#d9d2d0"
-  @hairline_soft "#e8e4e3"
+  @canvas "#f5f7f8"
+  @canvas_soft "#f1f3f3"
+  @surface "#fdfefe"
+  @hairline "#d0d6d8"
+  @hairline_soft "#e3e7e8"
 
-  @ink "#1d1816"
-  @ink_soft "#2b2422"
-  @ink_muted "#483e3b"
-  @ink_whisper "#5c514c"
+  @ink "#161b1d"
+  @ink_soft "#22292b"
+  @ink_muted "#394447"
+  @ink_whisper "#4b585b"
 
   # Dark palette, applied under `prefers-color-scheme: dark` by
   # `Styles.DarkMode`. A warm charcoal rather than pure black, mirroring the
   # light side's cream. Every ink tier clears WCAG AA against `canvas_soft`
   # and against each intent's dark tint, the lightest surfaces text sits on.
   @dark %{
-    canvas: "#0c0a09",
-    canvas_soft: "#1d1816",
-    surface: "#141110",
-    hairline: "#483e3b",
-    hairline_soft: "#2b2422",
-    ink: "#fbfaf9",
-    ink_soft: "#e8e4e3",
-    ink_muted: "#aba09c",
-    ink_whisper: "#9a8f8a"
+    canvas: "#090b0c",
+    canvas_soft: "#161b1d",
+    surface: "#101415",
+    hairline: "#394447",
+    hairline_soft: "#22292b",
+    ink: "#f9fbfb",
+    ink_soft: "#e3e7e8",
+    ink_muted: "#9ca8ab",
+    ink_whisper: "#8a979a"
   }
 
   # ============================================================================

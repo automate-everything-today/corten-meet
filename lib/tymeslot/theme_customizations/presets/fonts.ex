@@ -14,7 +14,7 @@ defmodule Tymeslot.ThemeCustomizations.Presets.Fonts do
   | `literary` | Source Sans 3 | Lora |
   | `editorial` | Inter | Fraunces |
   | `quiet` | system UI stack | system serif stack |
-  | `corten` | Inter | Space Grotesk |
+  | `corten` | Public Sans | DM Sans |
 
   The dashboard shows the names; those that are words are registered here for
   extraction into `dashboard_appearance` and translated where they are

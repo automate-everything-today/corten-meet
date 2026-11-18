@@ -59,8 +59,9 @@ defmodule Tymeslot.Emails.Branding do
   # "#0d9488" that shipped before (3.52:1 against band text, and only ever
   # used for the band) to "#0d786c" at 5.03:1, so the default stage band and
   # button both render a shade deeper than they did.
-  # Corten: stock family is the Corten pink.
-  @stock_family %{accent: "#ff3366", deep: "#bd1145", ink: "#9e163a", tint: "#fff1f2"}
+  # Corten: near-black band and buttons with a Corten pink accent, as in the
+  # CRM (PR #773).
+  @stock_family %{accent: "#ff3366", deep: "#161b1d", ink: "#161b1d", tint: "#f1f3f3"}
 
   @doc """
   The brand name substituted into email copy: the logo's alt text, the inbox

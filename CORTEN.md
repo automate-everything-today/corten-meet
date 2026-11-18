@@ -8,9 +8,9 @@ Everything Corten-specific is kept small so upstream releases merge cleanly.
 
 | Area | Change | Files |
 |---|---|---|
-| Styling | Corten CRM design canon: brand pink `#ff3366`, the CRM's warm neutrals, Inter text, Space Grotesk headings, 0.625rem radius | `assets/css/corten/brand.css` (imported last in `assets/css/app.css`) |
+| Styling | The Corten CRM look (CRM PR #773, preset b2Kruw4sE5): mist neutrals, near-black `#161b1d` buttons and active states, Corten pink `#ff3366` kept for the logo and highlights, Public Sans text, DM Sans headings, soft mist focus ring, 0.625rem radius | `assets/css/corten/brand.css` (imported last in `assets/css/app.css`) |
 | Booking page | New "Corten" palette and font for the Paper theme, made Paper's defaults | `lib/tymeslot/theme_customizations/presets/colour_schemes.ex`, `presets/fonts.ex`, `paper_spec.ex`, `assets/css/scheduling/shared/fonts.css`, `lib/tymeslot_web/themes/shared/font_preload.ex` |
-| Fonts | Space Grotesk (SIL OFL) | `priv/static/fonts/space-grotesk-*` |
+| Fonts | Public Sans and DM Sans (SIL OFL) | `priv/static/fonts/public-sans-*`, `priv/static/fonts/dm-sans-*` |
 | Logos and icons | Corten logo, app icon, favicon, social image, email logo | `priv/static/images/brand/corten-*`, `priv/static/favicon.ico`, `lib/tymeslot_web/components/core_components/brand.ex`, layouts |
 | Name | "Tymeslot" in user-facing text reads "Corten Meet"; tab titles end "· Corten Logistics" | interface strings across `lib/` |
 | Email footer | "© Corten Logistics · Source", linking here | `lib/tymeslot/emails/shared/layouts.ex` |
@@ -34,13 +34,13 @@ Database migrations run on start-up, so check the upstream changelog before movi
 ## Tests
 
 The upstream suite still asserts upstream branding, so these fail on this
-branch by design (44 in `test/tymeslot/emails` and
+branch by design (45 in `test/tymeslot/emails` and
 `test/tymeslot/theme_customizations` at v1.46.0):
 
 - copy that names "Tymeslot" (now "Corten Meet") and the email footer
-- the turquoise stock accent and email neutrals (now Corten pink and CRM greys)
-- palette and font counts (the Corten palette and font are added)
-- the AA check on filled controls: Corten pins white on #ff3366 (3.55:1),
-  matching the CRM, rather than letting the palette darken the pink
+- the turquoise stock accent and email neutrals (now near-black, pink and
+  the CRM's mist greys)
+- palette and font counts (the Corten palette and font are added, so the
+  filled-control AA test counts 26 palettes instead of 25; all still pass AA)
 
 Anything failing outside those categories is a real regression.

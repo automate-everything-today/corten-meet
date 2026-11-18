@@ -223,29 +223,31 @@ defmodule Tymeslot.ThemeCustomizations.Presets.ColourSchemes do
     "paper_corten" => %{
       name: "Corten",
       mode: :light,
+      # Corten CRM look (PR #773): near-black controls, mist neutrals,
+      # Corten pink as the accent.
       colors: %{
-        primary: "#ff3366",
-        primary_hover: "#e62e5c",
-        on_primary: "#ffffff",
+        primary: "#161b1d",
+        primary_hover: "#22292b",
+        on_primary: "#f9fbfb",
         on_accent: "#ffffff",
-        secondary: "#1d1816",
+        secondary: "#161b1d",
         accent: "#ff3366",
         background: "#ffffff",
         surface: "#ffffff",
-        text: "#0c0a09",
-        text_secondary: "#7c6d67"
+        text: "#090b0c",
+        text_secondary: "#56676a"
       },
       dark_colors: %{
-        primary: "#ff3366",
-        primary_hover: "#e62e5c",
-        on_primary: "#ffffff",
+        primary: "#e3e7e8",
+        primary_hover: "#d0d6d8",
+        on_primary: "#161b1d",
         on_accent: "#ffffff",
-        secondary: "#fbfaf9",
+        secondary: "#f9fbfb",
         accent: "#ff3366",
-        background: "#0c0a09",
-        surface: "#1d1816",
-        text: "#fbfaf9",
-        text_secondary: "#aba09c"
+        background: "#090b0c",
+        surface: "#161b1d",
+        text: "#f9fbfb",
+        text_secondary: "#9ca8ab"
       }
     },
     "paper_turquoise" => %{
