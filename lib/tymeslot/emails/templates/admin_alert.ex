@@ -34,14 +34,14 @@ defmodule Tymeslot.Emails.Templates.AdminAlert do
         ) :: Email.t()
   def render(recipient, category, severity, message, metadata) do
     MjmlEmail.base_email()
-    |> Email.to({"Tymeslot Operator", recipient})
+    |> Email.to({"Corten Meet Operator", recipient})
     |> Email.subject(subject(category, severity))
     |> Email.html_body(html_body(category, severity, message, metadata))
     |> Email.text_body(text_body(category, severity, message, metadata))
   end
 
-  defp subject(category, :error), do: "[ERROR] ⚠️ Tymeslot: #{category}"
-  defp subject(category, severity), do: "[#{severity_label(severity)}] Tymeslot: #{category}"
+  defp subject(category, :error), do: "[ERROR] ⚠️ Corten Meet: #{category}"
+  defp subject(category, severity), do: "[#{severity_label(severity)}] Corten Meet: #{category}"
 
   defp html_body(category, severity, message, metadata) do
     callout_intent = severity_to_intent(severity)
@@ -60,7 +60,7 @@ defmodule Tymeslot.Emails.Templates.AdminAlert do
 
     TemplateHelper.compile_system_template(
       mjml_content,
-      "Tymeslot Admin Alert",
+      "Corten Meet Admin Alert",
       "#{category}: #{message}",
       intent: @intent,
       eyebrow: "Admin",

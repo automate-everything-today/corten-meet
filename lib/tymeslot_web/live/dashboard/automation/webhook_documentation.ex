@@ -32,7 +32,7 @@ defmodule TymeslotWeb.Dashboard.Automation.WebhookDocumentation do
       description={
         dgettext(
           "dashboard_automation",
-          "Connect Tymeslot to n8n, Zapier, Make, or your custom automation workflows"
+          "Connect Corten Meet to n8n, Zapier, Make, or your custom automation workflows"
         )
       }
     >
@@ -67,7 +67,7 @@ defmodule TymeslotWeb.Dashboard.Automation.WebhookDocumentation do
                dgettext("dashboard_automation", "Start a new workflow in your n8n instance")},
               {dgettext("dashboard_automation", "Add webhook trigger"),
                dgettext("dashboard_automation", "Insert a Webhook node and copy its URL")},
-              {dgettext("dashboard_automation", "Configure in Tymeslot"),
+              {dgettext("dashboard_automation", "Configure in Corten Meet"),
                dgettext("dashboard_automation", "Create a webhook above and paste the URL")},
               {dgettext("dashboard_automation", "Select events"),
                dgettext("dashboard_automation", "Choose which booking events to monitor")},

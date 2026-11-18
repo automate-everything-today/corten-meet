@@ -420,10 +420,10 @@ from_email =
 # (not currently set) — fall back to app name when sendmail addon is active
 from_name =
   System.get_env("EMAIL_FROM_NAME") ||
-    (System.get_env("CLOUDRON_MAIL_FROM") && "Tymeslot") ||
+    (System.get_env("CLOUDRON_MAIL_FROM") && "Corten Meet") ||
     if config_env() == :prod,
       do: raise("environment variable EMAIL_FROM_NAME is missing"),
-      else: "Tymeslot"
+      else: "Corten Meet"
 
 config :tymeslot, :email,
   from_name: from_name,

@@ -41,7 +41,7 @@ defmodule Tymeslot.Themes.Catalog do
           status: status()
         }
 
-  @default_key :quill
+  @default_key :paper
 
   # Read at compile time; empty in every build but the test one (see the
   # moduledoc). The entries are plain atoms from config, not aliases, so they

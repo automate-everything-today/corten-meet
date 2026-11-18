@@ -201,8 +201,8 @@ defmodule TymeslotWeb.Components.DashboardLayout do
                   mode={:full}
                   img_class={
                     if(@compact,
-                      do: "h-8 sm:h-10 shrink min-w-0",
-                      else: "h-10 sm:h-16 shrink min-w-0"
+                      do: "h-7 sm:h-8 shrink min-w-0",
+                      else: "h-8 sm:h-10 shrink min-w-0"
                     )
                   }
                 />

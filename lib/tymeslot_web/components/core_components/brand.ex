@@ -4,7 +4,7 @@ defmodule TymeslotWeb.Components.CoreComponents.Brand do
   use Gettext, backend: TymeslotWeb.Gettext
 
   @doc """
-  Renders the Tymeslot logo.
+  Renders the Corten Logistics logo.
 
   ## Attributes
     * `mode` - Either :full (logo + text) or :icon (logo only). Defaults to :full.
@@ -21,16 +21,16 @@ defmodule TymeslotWeb.Components.CoreComponents.Brand do
     <div class={["flex items-center", @class]}>
       <%= if @mode == :full do %>
         <img
-          src="/images/brand/logo-with-text.svg"
-          alt="Tymeslot"
-          width="620"
-          height="200"
+          src="/images/brand/corten-logo.png"
+          alt="Corten Logistics"
+          width="600"
+          height="180"
           class={[@img_class, "w-auto"]}
         />
       <% else %>
         <img
-          src="/images/brand/logo.svg"
-          alt={dgettext("common", "Tymeslot logo")}
+          src="/images/brand/corten-icon.png"
+          alt="Corten Logistics"
           width="200"
           height="200"
           class={[@img_class, "w-auto"]}

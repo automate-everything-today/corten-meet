@@ -14,6 +14,7 @@ defmodule Tymeslot.ThemeCustomizations.Presets.Fonts do
   | `literary` | Source Sans 3 | Lora |
   | `editorial` | Inter | Fraunces |
   | `quiet` | system UI stack | system serif stack |
+  | `corten` | Inter | Space Grotesk |
 
   The dashboard shows the names; those that are words are registered here for
   extraction into `dashboard_appearance` and translated where they are
@@ -30,7 +31,8 @@ defmodule Tymeslot.ThemeCustomizations.Presets.Fonts do
     "classic" => %{name: dgettext_noop("dashboard_appearance", "Classic")},
     "literary" => %{name: dgettext_noop("dashboard_appearance", "Literary")},
     "editorial" => %{name: dgettext_noop("dashboard_appearance", "Editorial")},
-    "quiet" => %{name: dgettext_noop("dashboard_appearance", "Quiet")}
+    "quiet" => %{name: dgettext_noop("dashboard_appearance", "Quiet")},
+    "corten" => %{name: "Corten"}
   }
 
   @doc "Every font choice, keyed by id."

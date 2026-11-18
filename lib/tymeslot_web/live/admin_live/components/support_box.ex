@@ -17,7 +17,7 @@ defmodule TymeslotWeb.AdminLive.Components.SupportBox do
   use Gettext, backend: TymeslotWeb.Gettext
 
   @repo_url "https://github.com/Tymeslot/tymeslot"
-  @sponsor_url "https://github.com/sponsors/Tymeslot"
+  @sponsor_url "https://github.com/sponsors/Corten Meet"
   @new_issue_url "https://github.com/Tymeslot/tymeslot/issues/new"
 
   attr :alerts_ready, :boolean,
@@ -39,11 +39,11 @@ defmodule TymeslotWeb.AdminLive.Components.SupportBox do
       tag="aside"
       class="mt-12"
       icon="hero-heart"
-      title={dgettext("dashboard_admin", "Support Tymeslot")}
+      title={dgettext("dashboard_admin", "Support Corten Meet")}
       description={
         dgettext(
           "dashboard_admin",
-          "Tymeslot is free to self-host. If it is useful to you, here are three ways to help it grow."
+          "Corten Meet is free to self-host. If it is useful to you, here are three ways to help it grow."
         )
       }
     >

@@ -132,7 +132,7 @@ defmodule Tymeslot.Workers.SyncExchangeCalendarWorker do
       integration,
       dgettext_noop(
         "integrations_calendar",
-        "Tymeslot needs the mailbox's email address to read its free/busy time. Please reconnect the integration and provide it."
+        "Corten Meet needs the mailbox's email address to read its free/busy time. Please reconnect the integration and provide it."
       ),
       @no_mailbox
     )
@@ -230,7 +230,7 @@ defmodule Tymeslot.Workers.SyncExchangeCalendarWorker do
   def sync_error_message(:no_response_code) do
     dgettext_noop(
       "integrations_calendar",
-      "The Exchange server answered the free/busy request with nothing Tymeslot could read. Retrying rather than treating your diary as free."
+      "The Exchange server answered the free/busy request with nothing Corten Meet could read. Retrying rather than treating your diary as free."
     )
   end
 

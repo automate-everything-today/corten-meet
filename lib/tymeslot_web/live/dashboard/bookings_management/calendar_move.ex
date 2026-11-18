@@ -205,7 +205,7 @@ defmodule TymeslotWeb.Dashboard.BookingsManagement.CalendarMove do
   defp refusal_message(:calendar_write_pending) do
     dgettext(
       "dashboard_bookings",
-      "Tymeslot is still updating your calendar for this booking. Please try again in a moment."
+      "Corten Meet is still updating your calendar for this booking. Please try again in a moment."
     )
   end
 
@@ -226,7 +226,7 @@ defmodule TymeslotWeb.Dashboard.BookingsManagement.CalendarMove do
   end
 
   defp refusal_message(:failed_to_update_meeting) do
-    dgettext("dashboard_bookings", "Tymeslot could not move this booking. Please try again.")
+    dgettext("dashboard_bookings", "Corten Meet could not move this booking. Please try again.")
   end
 
   defp refusal_message(_reason) do

@@ -214,7 +214,7 @@ defmodule TymeslotWeb.Dashboard.MeetingSettings.InvitationsComponent do
         <p class="text-token-sm text-tymeslot-500">
           {dgettext(
             "dashboard_meeting_types",
-            "Each link books one appointment. Tymeslot sends no email: copy the link and send it yourself."
+            "Each link books one appointment. Corten Meet sends no email: copy the link and send it yourself."
           )}
         </p>
       </div>

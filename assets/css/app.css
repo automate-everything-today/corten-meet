@@ -50,6 +50,8 @@
 
 /* Import reCAPTCHA styles */
 @import "./recaptcha.css";
+/* Corten Logistics brand layer: must stay the last import */
+@import "./corten/brand.css";
 
 /* ===========================================================================
    Tailwind v4 CSS-first configuration

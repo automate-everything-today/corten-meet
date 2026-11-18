@@ -78,7 +78,7 @@ defmodule Tymeslot.Emails.Shared.MjmlEmail do
 
   @doc """
   Creates a base Swoosh email pre-configured for the given tracking category
-  and with the Tymeslot logo attached inline (CID `tymeslot-logo.png`) so the
+  and with the Tymeslot logo attached inline (CID `corten-logo.png`) so the
   system layout's logo header renders identically in every email client
   without needing an external URL.
 
@@ -137,7 +137,7 @@ defmodule Tymeslot.Emails.Shared.MjmlEmail do
   # Mailgun drops `cid:` entirely and keys inline images by filename.
   # Postmark and AhaSend echo the `cid:` we set. Matching filename and cid
   # is the only value that renders correctly across all four.
-  @logo_cid "tymeslot-logo.png"
+  @logo_cid "corten-logo.png"
 
   @doc "The Content-ID used for the inline logo attachment."
   @spec logo_cid() :: String.t()
@@ -319,9 +319,8 @@ defmodule Tymeslot.Emails.Shared.MjmlEmail do
           letter-spacing="0.02em"
           css-class="email-ink-muted"
         >
-          #{dgettext("emails", "Sent with care by")}
-          <a href="#{Urls.get_app_url()}" class="wordmark email-ink-link" style="color: #{Styles.ink()}; text-decoration: none; font-weight: 800;">Tymeslot</a>
-          · #{dgettext("emails", "scheduling that respects your time")}
+          <a href="https://cortenlogistics.com" class="wordmark email-ink-link" style="color: #{Styles.ink()}; text-decoration: none; font-weight: 800;">Corten Logistics</a>
+          · <a href="https://github.com/automate-everything-today/corten-meet" class="email-ink-link" style="color: #{Styles.ink_muted()}; text-decoration: underline;">#{dgettext("emails", "Source")}</a>
         </mj-text>
       </mj-column>
     </mj-section>

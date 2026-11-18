@@ -24,15 +24,15 @@ defmodule Tymeslot.ThemeCustomizations.PaperSpec do
   alias Tymeslot.ThemeCustomizations.Options.Radius
   alias Tymeslot.ThemeCustomizations.Spec
 
-  @palettes ~w(paper_turquoise paper_arctic paper_purple paper_sunset paper_ocean paper_forest paper_rose paper_monochrome)
-  @fonts ~w(system inter plex)
+  @palettes ~w(paper_corten paper_turquoise paper_arctic paper_purple paper_sunset paper_ocean paper_forest paper_rose paper_monochrome)
+  @fonts ~w(corten system inter plex)
 
   @impl Spec
   def option_groups,
     do: [
       %{key: :palette, module: Palette, schemes: @palettes, seed_mode: :light, follow_os: true},
       %{key: :colour_mode, module: ColourMode, default: "auto"},
-      %{key: :font, module: Font, presets: @fonts, default: "system"},
+      %{key: :font, module: Font, presets: @fonts, default: "corten"},
       %{key: :radius, module: Radius, default: "soft"},
       %{key: :calendar_view, module: CalendarView, default: "month"},
       %{key: :logo, module: Logo}
@@ -41,9 +41,9 @@ defmodule Tymeslot.ThemeCustomizations.PaperSpec do
   @impl Spec
   def defaults,
     do: %{
-      color_scheme: "paper_turquoise",
+      color_scheme: "paper_corten",
       colour_mode: "auto",
-      font: "system",
+      font: "corten",
       radius: "soft",
       calendar_view: "month"
     }

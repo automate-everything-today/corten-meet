@@ -104,15 +104,35 @@ defmodule Tymeslot.ThemeCustomizations.ContrastTokens do
     accent = hex(colors[:accent]) || primary
     dark_ink = dark_ink(colors)
 
-    primary_ink = ink(dark_ink, [primary, hover])
-    accent_ink = ink(dark_ink, [accent])
+    {primary_ink, primary_solid, primary_solid_hover} =
+      case hex(colors[:on_primary]) do
+        # Corten: a palette may pin its ink. The surfaces are then used as
+        # given, so a brand colour is not nudged (white on #ff3366, as in the
+        # CRM).
+        nil ->
+          ink = ink(dark_ink, [primary, hover])
+          {ink, fit(primary, ink), fit(hover, ink)}
+
+        pinned ->
+          {pinned, primary, hover}
+      end
+
+    {accent_ink, accent_solid} =
+      case hex(colors[:on_accent]) do
+        nil ->
+          ink = ink(dark_ink, [accent])
+          {ink, fit(accent, ink)}
+
+        pinned ->
+          {pinned, accent}
+      end
 
     %{
       on_primary: primary_ink,
-      primary_solid: fit(primary, primary_ink),
-      primary_solid_hover: fit(hover, primary_ink),
+      primary_solid: primary_solid,
+      primary_solid_hover: primary_solid_hover,
       on_accent: accent_ink,
-      accent_solid: fit(accent, accent_ink)
+      accent_solid: accent_solid
     }
   end
 

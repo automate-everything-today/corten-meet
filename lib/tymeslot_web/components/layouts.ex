@@ -72,7 +72,7 @@ defmodule TymeslotWeb.Layouts do
     Profiles.uploaded_avatar_path(profile) || ~p"/images/brand/default-avatar.png"
   end
 
-  defp booking_og_image_path(_profile), do: ~p"/images/brand/og-image.png"
+  defp booking_og_image_path(_profile), do: ~p"/images/brand/corten-og-image.png"
 
   @doc """
   Returns the Twitter card type for a scheduling page.

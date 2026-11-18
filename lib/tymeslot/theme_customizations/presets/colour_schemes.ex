@@ -218,6 +218,36 @@ defmodule Tymeslot.ThemeCustomizations.Presets.ColourSchemes do
     # set on a pale tint of its colour and a dark set on the same ground those
     # themes use, solid rather than glass. Paper follows the visitor's OS, so
     # every one carries both sets.
+    # Corten Logistics: the Corten CRM's design canon (packages/ui design-canon.css),
+    # converted from its oklch tokens. Brand pink #ff3366 is frozen.
+    "paper_corten" => %{
+      name: "Corten",
+      mode: :light,
+      colors: %{
+        primary: "#ff3366",
+        primary_hover: "#e62e5c",
+        on_primary: "#ffffff",
+        on_accent: "#ffffff",
+        secondary: "#1d1816",
+        accent: "#ff3366",
+        background: "#ffffff",
+        surface: "#ffffff",
+        text: "#0c0a09",
+        text_secondary: "#7c6d67"
+      },
+      dark_colors: %{
+        primary: "#ff3366",
+        primary_hover: "#e62e5c",
+        on_primary: "#ffffff",
+        on_accent: "#ffffff",
+        secondary: "#fbfaf9",
+        accent: "#ff3366",
+        background: "#0c0a09",
+        surface: "#1d1816",
+        text: "#fbfaf9",
+        text_secondary: "#aba09c"
+      }
+    },
     "paper_turquoise" => %{
       name: dgettext_noop("dashboard_appearance", "Default Turquoise"),
       mode: :light,

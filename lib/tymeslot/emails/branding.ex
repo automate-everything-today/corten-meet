@@ -38,7 +38,7 @@ defmodule Tymeslot.Emails.Branding do
   @logo_dir "branding"
   @logo_extension ".png"
 
-  @stock_logo_path "priv/static/images/brand/logo-with-text.png"
+  @stock_logo_path "priv/static/images/brand/corten-logo-email.png"
 
   # WCAG 2.1 minimum for the button's white text: it renders at
   # `Styles.font_size(:md)` (16px) with `font-weight="700"`, which does not
@@ -59,7 +59,8 @@ defmodule Tymeslot.Emails.Branding do
   # "#0d9488" that shipped before (3.52:1 against band text, and only ever
   # used for the band) to "#0d786c" at 5.03:1, so the default stage band and
   # button both render a shade deeper than they did.
-  @stock_family %{accent: "#14b8a6", deep: "#0d786c", ink: "#0f5954", tint: "#e1f7f3"}
+  # Corten: stock family is the Corten pink.
+  @stock_family %{accent: "#ff3366", deep: "#bd1145", ink: "#9e163a", tint: "#fff1f2"}
 
   @doc """
   The brand name substituted into email copy: the logo's alt text, the inbox

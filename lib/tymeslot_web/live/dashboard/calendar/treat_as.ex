@@ -188,7 +188,7 @@ defmodule TymeslotWeb.Dashboard.Calendar.TreatAs do
       <p class="text-token-xs text-tymeslot-500">
         {dgettext(
           "dashboard_calendar_booking",
-          "Affects Tymeslot bookings only. Your calendar doesn't change."
+          "Affects Corten Meet bookings only. Your calendar doesn't change."
         )}
       </p>
     </div>

@@ -39,11 +39,12 @@ defmodule TymeslotWeb.Themes.Shared.FontPreload do
     "plex" => ["ibm-plex-sans"],
     "classic" => ["inter", "source-serif-4"],
     "literary" => ["source-sans-3", "lora"],
-    "editorial" => ["inter", "fraunces"]
+    "editorial" => ["inter", "fraunces"],
+    "corten" => ["inter", "space-grotesk"]
   }
 
   # Fraunces ships no Cyrillic subset (see fonts.css).
-  @no_cyrillic ["fraunces"]
+  @no_cyrillic ["fraunces", "space-grotesk"]
 
   @doc "The families a font id's stacks name; none for an unknown id."
   @spec families(String.t() | nil) :: [String.t()]

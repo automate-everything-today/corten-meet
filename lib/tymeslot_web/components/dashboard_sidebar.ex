@@ -58,7 +58,7 @@ defmodule TymeslotWeb.Components.DashboardSidebar do
       <div class="p-6 lg:px-4 lg:pt-4">
         <%!-- Mobile Close Button --%>
         <div class="lg:hidden flex items-center justify-between mb-6">
-          <TymeslotWeb.Components.CoreComponents.Brand.logo mode={:full} img_class="h-12" />
+          <TymeslotWeb.Components.CoreComponents.Brand.logo mode={:full} img_class="h-9" />
           <button
             type="button"
             class="dashboard-sidebar-close p-3 rounded-token-xl bg-tymeslot-50 border-2 border-tymeslot-100 hover:bg-red-50 hover:border-red-100 transition-all"

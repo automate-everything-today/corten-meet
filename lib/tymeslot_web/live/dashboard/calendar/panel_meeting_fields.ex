@@ -38,7 +38,7 @@ defmodule TymeslotWeb.Dashboard.Calendar.PanelMeetingFields do
           id="calendar-panel-meeting-toggle"
           name="meeting"
           value={@values["meeting"]}
-          label={dgettext("dashboard_calendar_power", "Send as a Tymeslot meeting")}
+          label={dgettext("dashboard_calendar_power", "Send as a Corten Meet meeting")}
         />
       </div>
       <p class="text-token-xs text-tymeslot-500">

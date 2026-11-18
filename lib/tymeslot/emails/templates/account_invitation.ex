@@ -24,7 +24,7 @@ defmodule Tymeslot.Emails.Templates.AccountInvitation do
     RecipientLocale.with_user_locale(user, fn ->
       MjmlEmail.base_email()
       |> Email.to({user.name || user.email, user.email})
-      |> Email.subject(dgettext("emails_account", "You're invited to Tymeslot"))
+      |> Email.subject(dgettext("emails_account", "You're invited to Corten Meet"))
       |> Email.html_body(html_body(user, invitation_url))
       |> Email.text_body(text_body(user, invitation_url))
     end)
@@ -51,11 +51,11 @@ defmodule Tymeslot.Emails.Templates.AccountInvitation do
       dgettext("emails_account", "Invitation"),
       dgettext(
         "emails_account",
-        "Your Tymeslot account is ready. Accept the invitation to sign in."
+        "Your Corten Meet account is ready. Accept the invitation to sign in."
       ),
       intent: @intent,
       eyebrow: dgettext("emails_account", "Invitation"),
-      stage_title: dgettext("emails_account", "You're invited to Tymeslot"),
+      stage_title: dgettext("emails_account", "You're invited to Corten Meet"),
       stage_subtitle: dgettext("emails_account", "Your account is ready and waiting.")
     )
   end

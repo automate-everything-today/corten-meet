@@ -34,18 +34,18 @@ defmodule Tymeslot.Emails.Templates.AdminAlertDigest do
   @spec render(String.t(), map()) :: Email.t()
   def render(recipient, digest) do
     MjmlEmail.base_email()
-    |> Email.to({"Tymeslot Operator", recipient})
+    |> Email.to({"Corten Meet Operator", recipient})
     |> Email.subject(subject(digest))
     |> Email.html_body(html_body(digest))
     |> Email.text_body(text_body(digest))
   end
 
   defp subject(%{"kind" => "errors"} = digest) do
-    "[ERROR] Tymeslot: #{pluralise(total_alerts(digest), "more error alert")} this hour"
+    "[ERROR] Corten Meet: #{pluralise(total_alerts(digest), "more error alert")} this hour"
   end
 
   defp subject(digest) do
-    "[INFO] Tymeslot: daily digest (#{pluralise(total_alerts(digest), "alert")})"
+    "[INFO] Corten Meet: daily digest (#{pluralise(total_alerts(digest), "alert")})"
   end
 
   defp html_body(digest) do
@@ -69,7 +69,7 @@ defmodule Tymeslot.Emails.Templates.AdminAlertDigest do
 
     TemplateHelper.compile_system_template(
       mjml_content,
-      "Tymeslot Admin Alert Digest",
+      "Corten Meet Admin Alert Digest",
       subject(digest),
       intent: copy.intent,
       eyebrow: "Admin",
@@ -104,7 +104,7 @@ defmodule Tymeslot.Emails.Templates.AdminAlertDigest do
         "#{pluralise(total_alerts(digest), "error alert")} held back after this hour's " <>
           "first ones, newest first",
       footer:
-        "Tymeslot emails the first few new or returning errors of an hour at once and " <>
+        "Corten Meet emails the first few new or returning errors of an hour at once and " <>
           "collects the rest here, so a bad deploy sends one email rather than one per error.",
       text_title: "TYMESLOT ERROR ALERT ROLL-UP",
       stage_title: "Error alert roll-up",
